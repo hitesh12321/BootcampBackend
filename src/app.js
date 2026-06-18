@@ -16,6 +16,10 @@ app.use(express.static("public"));
 const healthRouter = require("./routes/healph.router");
 app.use("/api/v1", healthRouter);
 
+const authRouter = require("./routes/auth.routes");
+app.use("/api/v1/auth", authRouter);
+
+
 app.get("/", (req, res) => res.send("Hello World!"));
 app.get("/about", (req, res) => res.send("this is BaseCAmpAPp api"));
 
